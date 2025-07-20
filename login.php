@@ -17,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         $user = $result->fetch_assoc();
         if (password_verify($password, $user['password'])) {
-            session_start();
-			session_regenerate_id(true);
+           // session_start();
+			//session_regenerate_id(true);
             $_SESSION['username'] = $username;
             $_SESSION['name'] = $user['name'];
             header("location: index.php");

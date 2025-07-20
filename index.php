@@ -1,4 +1,8 @@
 <?php
+//ini_set('session.use_trans_sid', 1);
+
+// Không bắt buộc phải sử dụng cookie
+//ini_set('session.use_only_cookies', 0);
 // Bắt đầu session ở đầu file
 session_start();
 ?>
@@ -66,7 +70,7 @@ session_start();
                 <p><strong>Xin chào,</strong></p>
                 <p class="display-name"><?php echo htmlspecialchars($_SESSION['name']); ?></p>
                 <p>Chào mừng bạn đã quay trở lại!</p>
-                <a href="#" class="my-account-btn">Quản lý tài khoản</a>
+                <a href="profile.php" class="my-account-btn">Quản lý tài khoản</a>
             </aside>
             <?php endif; ?>
         </div>
